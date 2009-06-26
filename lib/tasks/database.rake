@@ -2,7 +2,7 @@ namespace :db do
   desc "Migrate schema to version 0 and back up again. WARNING: Destroys all data in tables!!"
   task :remigrate => :environment do
     require 'highline/import'
-    if ENV['OVERWRITE'].to_s.downcase == 'true' or agree("This task will destroy any data in the database. Are you sure you want to \ncontinue? [yn] ")
+    #if ENV['OVERWRITE'].to_s.downcase == 'true' or agree("This task will destroy any data in the database. Are you sure you want to \ncontinue? [yn] ")
       
       # Migrate downward
       ActiveRecord::Migrator.migrate("#{RADIANT_ROOT}/db/migrate/", 0)
@@ -15,7 +15,7 @@ namespace :db do
     else
       say "Task cancelled."
       exit
-    end
+    #end
   end
   
   desc "Bootstrap your database for Radiant."
