@@ -12,9 +12,9 @@ namespace :db do
       
       # Dump the schema
       Rake::Task["db:schema:dump"].invoke
-    else
-      say "Task cancelled."
-      exit
+    # else
+    #  say "Task cancelled."
+    #  exit
     #end
   end
   
