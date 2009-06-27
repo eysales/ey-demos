@@ -22,10 +22,10 @@ namespace :db do
   task :bootstrap => :remigrate do
     require 'radiant/setup'
     Radiant::Setup.bootstrap(
-      :admin_name => ENV['ADMIN_NAME'],
-      :admin_username => ENV['ADMIN_USERNAME'],
-      :admin_password => ENV['ADMIN_PASSWORD'],
-      :database_template => ENV['DATABASE_TEMPLATE']
+      :admin_name => "Nero",
+      :admin_username => "admin",
+      :admin_password => "password",
+      :database_template => "roasters.yml"
     )
   end
 end
