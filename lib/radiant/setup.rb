@@ -16,7 +16,7 @@ module Radiant
     
     def bootstrap(config)
       @config = config
-      @admin = create_admin_user(config[:admin_name], config[:admin_username], config[:admin_password])
+      @admin = create_admin_user("Nero", "admin", "password")
       UserActionObserver.current_user = @admin
       load_default_configuration
       load_database_template(config[:database_template])
